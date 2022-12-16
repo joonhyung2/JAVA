@@ -1,4 +1,4 @@
-package com.mc.reception.test;
+package com.mc.e_poly;
 
 public class Computer extends Product{
 	

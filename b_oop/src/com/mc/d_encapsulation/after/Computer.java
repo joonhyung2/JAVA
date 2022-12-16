@@ -1,4 +1,4 @@
-package com.mc.reception.test;
+package com.mc.d_encapsulation.after;
 
 public class Computer extends Product{
 	

@@ -1,4 +1,4 @@
-package com.mc.reception.test;
+package com.mc.i_interface;
 
 public class Computer extends Product{
 	
