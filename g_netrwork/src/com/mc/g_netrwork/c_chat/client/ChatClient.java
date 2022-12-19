@@ -44,19 +44,18 @@ public class ChatClient {
 			System.out.print("닉네임 : ");
 			String userId = sc.nextLine();
 			
-			try(PrintWriter writer = new PrintWriter(socket.getOutputStream())){
+			while(true) {
+				String message = sc.nextLine();
+				System.out.println();
 				
-				while(true) {
-					String message = sc.nextLine();
-					System.out.println();
+				try{
+					PrintWriter writer = new PrintWriter(socket.getOutputStream());
 					writer.println(userId + " : " + message);
 					writer.flush();
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-				
-			} catch (IOException e1) {
-				e1.printStackTrace();
 			}
-			
 		}).start();
 	}
 

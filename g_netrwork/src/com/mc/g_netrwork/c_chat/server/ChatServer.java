@@ -10,16 +10,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public class ChatServer {
 	
 	private ServerSocket serverSocket;
 	private List<Socket> socketList;
 	
 	public ChatServer() {
-		
-		// 10.10.0.17 //  80
 		 try {
-			 this.serverSocket = new ServerSocket(80);
+			 this.serverSocket = new ServerSocket(8989);
 			 socketList = Collections.synchronizedList(new ArrayList<Socket>());
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -58,6 +57,7 @@ public class ChatServer {
 				
 				try (BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 					while(true) {
+						
 						String message = br.readLine();
 						
 						if(message != null) {
@@ -71,6 +71,7 @@ public class ChatServer {
 		});
 		
 		thread.start();
+		
 	}
 
 	protected void broadcast(String message) {

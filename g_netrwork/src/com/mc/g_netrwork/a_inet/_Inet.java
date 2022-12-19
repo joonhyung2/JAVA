@@ -28,7 +28,6 @@ public class _Inet {
 			System.out.println("네이버 이름 : " + naver.getHostName());
 			
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
