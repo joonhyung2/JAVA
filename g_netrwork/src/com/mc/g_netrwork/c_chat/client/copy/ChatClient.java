@@ -1,4 +1,4 @@
-package com.mc.g_netrwork.c_chat.client;
+package com.mc.g_netrwork.c_chat.client.copy;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

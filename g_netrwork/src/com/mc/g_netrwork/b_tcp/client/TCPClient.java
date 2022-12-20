@@ -13,7 +13,7 @@ public class TCPClient {
 	public void clientStart() {
 		
 		// 서버의 ip와 port를 지정
-		String ip = "10.10.0.17";
+		String ip = "10.10.0.111";
 		int port = 8989;
 		
 		while(true) {

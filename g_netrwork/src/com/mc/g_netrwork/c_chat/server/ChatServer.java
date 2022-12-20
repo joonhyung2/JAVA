@@ -22,6 +22,7 @@ public class ChatServer {
 			 socketList = Collections.synchronizedList(new ArrayList<Socket>());
 		} catch (IOException e) {
 			e.printStackTrace();
+		
 		}
 	}
 	
@@ -66,6 +67,7 @@ public class ChatServer {
 					}
 				} catch (IOException e) {
 					System.out.println("연결이 종료되었습니다.");
+					removeSocket(socket);
 				}
 			}
 		});
@@ -105,6 +107,8 @@ public class ChatServer {
 		System.out.println("=============================");
 		System.out.println("접속인원 : " + socketList.size());
 	}
+
+
 	
 	
 	
